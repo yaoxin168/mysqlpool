@@ -26,7 +26,7 @@ public:
     //事务回滚
     bool rollback();
 private:
-    void freeResult();//读完了结果集里的数据后，需要释放指针m_result
+    void freeResult();//每次读完了结果集里的数据后，都需要释放指针m_result，清空结果集
     MYSQL* m_conn = nullptr;
     MYSQL_RES* m_result = nullptr;//结果集
     MYSQL_ROW m_row = nullptr;//MYSQL_ROW是一个指针数组，指向一条记录，记录里有许多字段。
