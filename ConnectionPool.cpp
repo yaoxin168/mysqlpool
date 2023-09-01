@@ -90,7 +90,7 @@ shared_ptr<MysqlConn> ConnectionPool::getConnection()
 
 bool ConnectionPool::paeseJsonFile()
 {
-    ifstream ifs("/home/yx/code/othercode/mysqlpool/dbconf.json");//以输入的方式打开文件
+    ifstream ifs("./dbconf.json");//以输入的方式打开文件
     if (!ifs)
     {
         cout<<"文件打开失败"<<endl;
