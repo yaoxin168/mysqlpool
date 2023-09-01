@@ -1,4 +1,5 @@
 #include "MysqlConn.h"
+#include <iostream>
 
 MysqlConn::MysqlConn()
 {
@@ -18,8 +19,11 @@ MysqlConn::~MysqlConn()
 
 bool MysqlConn::connect(string user, string passwd, string dbName, string ip, unsigned short port)
 {
+    std::cout<<"connect"<<std::endl;
     //c_str：string转char*
     MYSQL* ptr = mysql_real_connect(m_conn, ip.c_str(), user.c_str(), passwd.c_str(), dbName.c_str(), port, nullptr, 0);
+
+    std::cout<<"connect2"<<std::endl;
     //成功，则返回的ptr和m_conn是一样的，失败，则返回nullptr
     return ptr != nullptr;
 
@@ -52,6 +56,11 @@ bool MysqlConn::next()
     if(m_result != nullptr)//如果结果集为空，就没必要遍历了
     {
         m_row = mysql_fetch_row(m_result);
+        if (m_row != nullptr)
+        {
+            return true;
+        }
+        
     }
 
     return false;
@@ -84,6 +93,19 @@ bool MysqlConn::commit()
 bool MysqlConn::rollback()
 {
     return mysql_rollback(m_conn);//事务回滚
+}
+
+void MysqlConn::refreshAliveTime()
+{
+    m_alivetime = steady_clock::now();
+}
+
+long long MysqlConn::getAliveTime()
+{
+    nanoseconds res = steady_clock::now()-m_alivetime;
+    //使用duration_cast将纳秒转换成毫秒
+    milliseconds millsec = duration_cast<milliseconds> (res);
+    return millsec.count();
 }
 
 void MysqlConn::freeResult()
