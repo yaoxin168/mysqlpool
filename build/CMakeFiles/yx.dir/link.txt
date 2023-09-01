@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/yx.dir/main.cpp.o CMakeFiles/yx.dir/MysqlConn.cpp.o CMakeFiles/yx.dir/ConnectionPool.cpp.o CMakeFiles/yx.dir/three/cJSON.c.o  -o yx -lmysqlclient -lpthread 

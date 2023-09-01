@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/yx/code/othercode/mysqlpool/build",
+  "command": "/usr/bin/g++   -I/home/yx/code/othercode/mysqlpool/include -I/usr/include/mysql -I/home/yx/code/othercode/mysqlpool/three  -g   -std=gnu++14 -o CMakeFiles/yx.dir/main.cpp.o -c /home/yx/code/othercode/mysqlpool/main.cpp",
+  "file": "/home/yx/code/othercode/mysqlpool/main.cpp"
+},
+{
+  "directory": "/home/yx/code/othercode/mysqlpool/build",
+  "command": "/usr/bin/g++   -I/home/yx/code/othercode/mysqlpool/include -I/usr/include/mysql -I/home/yx/code/othercode/mysqlpool/three  -g   -std=gnu++14 -o CMakeFiles/yx.dir/MysqlConn.cpp.o -c /home/yx/code/othercode/mysqlpool/MysqlConn.cpp",
+  "file": "/home/yx/code/othercode/mysqlpool/MysqlConn.cpp"
+},
+{
+  "directory": "/home/yx/code/othercode/mysqlpool/build",
+  "command": "/usr/bin/g++   -I/home/yx/code/othercode/mysqlpool/include -I/usr/include/mysql -I/home/yx/code/othercode/mysqlpool/three  -g   -std=gnu++14 -o CMakeFiles/yx.dir/ConnectionPool.cpp.o -c /home/yx/code/othercode/mysqlpool/ConnectionPool.cpp",
+  "file": "/home/yx/code/othercode/mysqlpool/ConnectionPool.cpp"
+},
+{
+  "directory": "/home/yx/code/othercode/mysqlpool/build",
+  "command": "/usr/bin/gcc  -I/home/yx/code/othercode/mysqlpool/include -I/usr/include/mysql -I/home/yx/code/othercode/mysqlpool/three  -g   -o CMakeFiles/yx.dir/three/cJSON.c.o   -c /home/yx/code/othercode/mysqlpool/three/cJSON.c",
+  "file": "/home/yx/code/othercode/mysqlpool/three/cJSON.c"
+}
+]

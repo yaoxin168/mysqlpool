@@ -1,0 +1,3 @@
+/home/yx/code/othercode/mysqlpool/build/CMakeFiles/rebuild_cache.dir
+/home/yx/code/othercode/mysqlpool/build/CMakeFiles/yx.dir
+/home/yx/code/othercode/mysqlpool/build/CMakeFiles/edit_cache.dir
